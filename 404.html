@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="refresh" content="0; url=/">
+  <head>
+    <meta charset="UTF-8" />
     <script>
-        var pathname = window.location.pathname;
-        var newUrl = window.location.protocol + "//" + window.location.host + '/disaster-unite' + pathname;
+      // 取得當前路徑
+      var pathname = window.location.pathname;
+
+      // 補上 /disaster-unite 前綴（避免重複）
+      if (!pathname.startsWith('/disaster-unite')) {
+        var newUrl = window.location.protocol + '//' + window.location.host + '/disaster-unite' + pathname;
         window.location.replace(newUrl);
+      }
     </script>
-</head>
-<body>
-</body>
+  </head>
+  <body></body>
 </html>
