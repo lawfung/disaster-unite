@@ -2,16 +2,16 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <title>Redirecting...</title>
     <script>
-      // 取得當前路徑
-      var pathname = window.location.pathname;
-
-      // 補上 /disaster-unite 前綴（避免重複）
-      if (!pathname.startsWith('/disaster-unite')) {
-        var newUrl = window.location.protocol + '//' + window.location.host + '/disaster-unite' + pathname;
+      (function () {
+        var path = window.location.pathname.replace(/^\/disaster-unite/, '');
+        var newUrl = window.location.origin + '/disaster-unite/#' + path;
         window.location.replace(newUrl);
-      }
+      })();
     </script>
   </head>
-  <body></body>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
