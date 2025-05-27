@@ -1,0 +1,125 @@
+/* Add styles for the popup overlay */
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Fix the white background of popup-content */
+.popup-content {
+  background: #1c1c24 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.modal {
+  font-size: 12px;
+  background-color: #1c1c24;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  color: white;
+}
+
+.warning-modal {
+  background-color: #2c1c1c;
+  border: none;
+}
+
+.warning-modal h2 {
+  color: #ff4444;
+  margin-top: 0;
+}
+
+.warning-modal ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.warning-modal li {
+  color: #ff4444;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 68, 68, 0.3);
+}
+
+.warning-modal li:last-child {
+  border-bottom: none;
+}
+
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+  color: white;
+}
+
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #1c1c24;
+  border-radius: 18px;
+  border: 1px solid #333;
+  color: white;
+}
+
+.button {
+  border: none;
+  padding: 8px 16px;
+  background-color: #8c6dfd;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.button:hover {
+  background-color: #7b5dfd;
+}
+
+.button:active {
+  background-color: #6a4dfd;
+}
+
+.preview-section {
+  background-color: #2c2c2c;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.preview-section h3 {
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+.preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c24;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.preview-section a {
+  color: #8c6dfd;
+  text-decoration: none;
+}
+
+.preview-section a:hover {
+  text-decoration: underline;
+} 
