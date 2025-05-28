@@ -17,7 +17,7 @@ root.render(
   // for the next version of thirdweb we have to register an API through: https://thirdweb.com/dashboard/settings/api-keys
   clientId="48c52747f331257dad6db6b16f69b439"
   > 
-    <Router>
+    <Router basename='/disaster-unite'>
       <StateContextProvider>
         <App />
       </StateContextProvider>

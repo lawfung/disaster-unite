@@ -1,8 +1,35 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import { Sidebar, Navbar } from './components';
-import { CampaignDetails, AddDisaster, UpdateCampaign, ProposalVoting, ProposalDetails, ApplicationSubmit, DonationLookup, DisasterVoting, Introduction, DonateNow, Donation } from './pages';
+import {
+  CampaignDetails,
+  AddDisaster,
+  UpdateCampaign,
+  ProposalVoting,
+  ProposalDetails,
+  ApplicationSubmit,
+  DonationLookup,
+  DisasterVoting,
+  Introduction,
+  DonateNow,
+  Donation,
+} from './pages';
+
+const RedirectHandler = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get('redirect');
+
+    if (redirect) {
+      navigate(redirect, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+};
 
 const App = () => {
   return (
@@ -27,10 +54,13 @@ const App = () => {
           <Route path="/introduction" element={<Introduction />} />
           <Route path="/donate-now" element={<DonateNow />} />
           <Route path="/donation" element={<Donation />} />
+
+          {/* 🔁 fallback redirect handler */}
+          <Route path="*" element={<RedirectHandler />} />
         </Routes>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      // 擷取完整路徑與查詢參數
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      // GitHub Pages 頁面根目錄（你的專案 base）
+      var base = "/disaster-unite";
+
+      // 如果已經在 base 裡，就直接移除它避免重複
+      if (path.startsWith(base)) {
+        path = path.slice(base.length);
+      }
+
+      // 重導向到 index.html，讓 React Router 處理 client-side routing
+      var newUrl = window.location.origin + base + "/index.html?redirect=" + encodeURIComponent(path + search + hash);
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
